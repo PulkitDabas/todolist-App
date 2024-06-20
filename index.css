@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Playwrite NG Modern", cursive;
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    font-size: large;
+  }
+  
+  #root {
+    width: 100%;
+    max-width: 500px; 
+    background-color: black;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  #heading {
+    text-align: right;
+    margin-bottom: 20px;
+  }
+  
+  #heading h1 {
+    color: whitesmoke;
+    background-color: #10b981;
+    border-radius: 20px;
+    padding-right: 20px;
+  }
+  #heading h1:hover{
+    background-color: black;
+    color: yellow;
+    transition: background-color 0.3s ease;
+  }
+
+  #container {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #input {
+    width: 100%;
+    border: 1px solid #d1d5db;
+    border-radius: 20px;
+    transition: border-color 0.3s ease;
+    text-align: center;
+    color: red;
+    background-color: black;
+  }
+  
+  #input:focus {
+    outline: none;
+    border-color: 2px solid #10b981;
+  }
+
+  #input::placeholder{
+    text-align: center;
+    background-color: black;
+    color: yellow;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #addbtn {
+    width: 100%;
+    padding-left:20px;
+    background-color: #10b981;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-variant-caps: all-petite-caps;
+    text-align: left;
+  }
+  
+  #addbtn:hover {
+    background-color: black;
+    color: yellow;
+  }
+  
+  #todolist {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    padding: 20px;
+    margin: auto;
+    gap: 20px;
+  }
+  
+  #todolist li {
+    background-color: #ffffff;
+    border: 1px solid #d1d5db;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s ease;
+  }
+  
+  #todolist li:hover {
+    transform: scale(1.02);
+    background-color: black;
+    color: yellow;
+  }
+  #todolist li:nth-child(2n+1){
+    color: yellow;
+    background-color: black;
+  }
+  #todolist li:nth-child(2n+1):hover{
+    color: white;
+    background-color: #10b981;
+  }
+  
+  #todolist li:last-child {
+    margin-bottom: 0;
+  }
+  
+  

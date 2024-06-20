@@ -14,7 +14,7 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
-let user = prompt("Enter your name").toUpperCase()
+let user = prompt("Enter your name").toUpperCase();
 const todoDB = ref(database, `todolist/${user}`);
 
 let addbtn = document.getElementById("addbtn");
@@ -23,12 +23,14 @@ let todolistitem = document.getElementById("todolist");
 
 addbtn.addEventListener("click", function () {
   let inputvalue = input.value;
+  if (inputvalue == "" || inputvalue == false) {
+  } else {
+    let capitaldisplay = inputvalue.toUpperCase();
 
-  let capitaldisplay = inputvalue.toUpperCase();
+    push(todoDB, capitaldisplay);
 
-  push(todoDB, capitaldisplay);
-
-  clear();
+    clear();
+  }
 });
 
 onValue(todoDB, function (snapshot) {
@@ -66,8 +68,8 @@ function addtoList(string) {
     if (answer) {
       const loactionInDB = ref(database, `todolist/${user}/${elementID}`);
       remove(loactionInDB);
-    }else{
-      alert("No changes made.")
+    } else {
+      alert("No changes made.");
     }
   });
 
